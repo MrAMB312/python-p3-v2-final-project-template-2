@@ -5,6 +5,7 @@ from models.instrument import Instrument
 
 def exit_program():
     print("Thank you for using the Instrument Database 3000. Goodbye!")
+    print()
     exit()
 
 def initialize_database():

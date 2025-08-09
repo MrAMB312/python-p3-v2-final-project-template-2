@@ -16,40 +16,53 @@ from helpers import (
 
 def instrument_menu(instrument):
     while True:
+        print("---")
         list_instrument_details(instrument)
 
+        print("---")
         menu3()
+        print("---")
         choice = input("> ")
 
         if choice.lower() == "d":
+            print("---")
             delete_instrument(instrument.id)
             return
         elif choice.lower() == "u":
+            print("---")
             update_instrument_details(instrument.id)
         elif choice.lower() == "b":
             return
         elif choice.lower() == "e":
+            print("---")
             exit_program()
             break
         else:
+            print("---")
             print("Invalid choice. Please try again.")
         
 
 def musician_menu(musician):
     while True:
+        print("---")
         instruments = list_instruments(musician)
 
+        print("---")
         menu2()
+        print("---")
         choice = input("> ")
 
         if choice.lower() == "a":
+            print("---")
             create_instrument(musician.id)
         elif choice.lower() == "d":
+            print("---")
             delete_musician(musician.id)
             break
         elif choice.lower() == "m":
             break
         elif choice.lower() == "e":
+            print("---")
             exit_program()
             break
         elif choice.isdigit():
@@ -63,15 +76,22 @@ def musician_menu(musician):
 def main():
     initialize_database()
     while True:
+        print("---")
         print("Welcome to the Instrument Database 3000!")
+        print("---")
         musicians = list_musicians()
 
+        print("---")
         menu1()
+        print("---")
         choice = input("> ")
 
         if choice.lower() == "a":
+            print("---")
             create_musician()
+            print("---")
         elif choice.lower() == "e":
+            print("---")
             exit_program()
             break
         elif choice.isdigit():
